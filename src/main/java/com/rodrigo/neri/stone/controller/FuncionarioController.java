@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rodrigo.neri.stone.controller.dto.request.FuncionarioRequest;
+import com.rodrigo.neri.stone.controller.dto.response.FuncionarioResponse;
 import com.rodrigo.neri.stone.model.Funcionario;
 import com.rodrigo.neri.stone.service.FuncionarioService;
 
@@ -23,8 +25,9 @@ public class FuncionarioController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Funcionario create(@Validated @RequestBody  @Valid Funcionario funcionario) {
-		return funcionarioService.create(funcionario);
+	public FuncionarioResponse create(@Validated @RequestBody  @Valid FuncionarioRequest funcionarioRequest) {
+		Funcionario response = funcionarioService.create(funcionarioRequest.toFuncionario());
+		return response.toResponse();
 	}
 
 }
