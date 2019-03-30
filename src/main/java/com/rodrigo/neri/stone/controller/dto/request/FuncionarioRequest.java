@@ -1,6 +1,5 @@
 package com.rodrigo.neri.stone.controller.dto.request;
 
-import java.text.NumberFormat;
 import java.time.LocalDate;
 
 import com.rodrigo.neri.stone.config.Utils;
@@ -19,9 +18,9 @@ public class FuncionarioRequest {
 
 	private String cargo;
 
-	private String salarioBruto;
+	private String salario_bruto;
 
-	private LocalDate dataDeAdmissao;
+	private LocalDate data_de_admissao;
 	
 	public Funcionario toFuncionario() {
 		Funcionario f = new Funcionario();
@@ -29,8 +28,8 @@ public class FuncionarioRequest {
 		f.setNome(this.nome);
 		f.setArea(this.area);
 		f.setCargo(this.cargo);
-		f.setSalarioBruto(Utils.convertInteger(this.salarioBruto));
-		f.setDataDeAdmissao(this.dataDeAdmissao);
+		f.setSalarioBruto(Utils.convertInteger(this.salario_bruto));
+		f.setDataDeAdmissao(this.data_de_admissao);
 		return f;
 	}
 	
