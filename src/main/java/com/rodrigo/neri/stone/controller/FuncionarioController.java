@@ -1,5 +1,7 @@
 package com.rodrigo.neri.stone.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,12 @@ public class FuncionarioController {
 	public FuncionarioResponse create(@Validated @RequestBody  @Valid FuncionarioRequest funcionarioRequest) {
 		Funcionario response = funcionarioService.create(funcionarioRequest.toFuncionario());
 		return response.toResponse();
+	}
+	
+	
+	@PostMapping("/createlist")
+	public void create(@RequestBody List<Funcionario> funcionario) {
+        funcionarioService.createList(funcionario);
 	}
 
 }
