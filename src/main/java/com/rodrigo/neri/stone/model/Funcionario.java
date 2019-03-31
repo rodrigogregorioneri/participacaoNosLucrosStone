@@ -2,9 +2,12 @@ package com.rodrigo.neri.stone.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.rodrigo.neri.stone.config.Utils;
 import com.rodrigo.neri.stone.controller.dto.response.FuncionarioResponse;
 
@@ -25,8 +28,10 @@ public class Funcionario {
 
 	private String cargo;
 
+	@JsonProperty("salario_bruto")
 	private Double salarioBruto;
 
+	@JsonProperty("data_de_admissao")
 	private LocalDate dataDeAdmissao;
 	
 	
