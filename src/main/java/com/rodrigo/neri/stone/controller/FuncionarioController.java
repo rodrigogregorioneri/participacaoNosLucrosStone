@@ -36,7 +36,7 @@ public class FuncionarioController {
 	
 	
 	@PostMapping("/createlist")
-	public void create(@RequestBody List<FuncionarioRequest> funcionario) {
+	public void create(@Validated @RequestBody @Valid List<FuncionarioRequest> funcionario) {
         funcionarioService.createList(funcionario);
 	}
 	

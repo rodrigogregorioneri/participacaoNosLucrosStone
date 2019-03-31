@@ -47,9 +47,6 @@ public class FuncionarioService {
     	});
     	response.setParticipacoes(participacoes);
     	response.setTotal_de_funcionarios(String.valueOf(participacoes.size()));
-    	System.out.println(totalBonus);
-    	System.out.println(valorMaximo);
-    	System.out.println(valorMaximo-totalBonus);
     	response.setTotal_distribuido(Utils.convertString(totalBonus));
     	response.setTotal_disponibilizado(Utils.convertString(valorMaximo));
     	response.setSaldo_total_disponibilizado(Utils.convertString(valorMaximo-totalBonus));
