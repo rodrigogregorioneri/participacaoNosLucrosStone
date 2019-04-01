@@ -11,3 +11,8 @@ https://stone-participacoes-nos-lucros.herokuapp.com/stone/participacao-lucros/s
 - para rodar o projeto na IDE basta usar o Eclipse STS ou IntelliJ eles já são faceis de executar o projeto e como já existe um tomcat embutido não requer servidor de aplicação ou container.
 - Não é necessario configurar o banco pois já está sendo utilizado o banco na nuvvem da mlab caso queira conectar no banco para testes só verificar no application.properties as credenciais.
 
+
+Recomendações:
+
+seria interessante mudar a forma que a entrada principalmente a moeda pois ela está entrando como String o que não é legal a responsabilidade da formatação da moeda e do FrontEnd talvez seja interesante usar o Padrão Money para moeda ou um tipo BigInteger.
+
