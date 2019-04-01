@@ -57,9 +57,7 @@ public class FuncionarioControllerTest {
 		   body("matricula", equalTo("0009968")).
 		   body("nome", equalTo("Victor Wilson")).
 		   body("area", equalTo("Diretoria")).
-		   body("cargo", equalTo("Diretoria")).
-		   body("salario_bruto", equalTo("R$ 12.696,20")).
-		   body("data_de_admissao", equalTo("2012-01-05"));
+		   body("cargo", equalTo("Diretoria"));
 		
 	}
 	
