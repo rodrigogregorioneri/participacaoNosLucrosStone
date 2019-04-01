@@ -2,9 +2,10 @@ package com.rodrigo.neri.stone.model;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -18,19 +19,26 @@ import lombok.Data;
 public class Funcionario {
 	
 	@Id
+	@Indexed
 	private String id;
 	
+	@NotNull
 	private String matricula;
 
+	@NotNull
 	private String nome;
 
+	@NotNull
 	private String area;
 
+	@NotNull
 	private String cargo;
 
+	@NotNull
 	@JsonProperty("salario_bruto")
 	private Double salarioBruto;
 
+	@NotNull
 	@JsonProperty("data_de_admissao")
 	private LocalDate dataDeAdmissao;
 	
