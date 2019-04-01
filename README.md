@@ -14,5 +14,5 @@ https://stone-participacoes-nos-lucros.herokuapp.com/stone/participacao-lucros/s
 
 Recomendações:
 
-seria interessante mudar a forma que a entrada principalmente a moeda pois ela está entrando como String o que não é legal a responsabilidade da formatação da moeda e do FrontEnd talvez seja interesante usar o Padrão Money para moeda ou um tipo BigInteger.
+seria interessante mudar a forma que a entrada principalmente a moeda pois ela está entrando como String o que não é legal a responsabilidade da formatação da moeda e do FrontEnd talvez seja interesante usar o Padrão Money para moeda ou um tipo BigInteger, outro ponto a avaliar seria registrar os logs de transações e trace para caso tenha problemas em transações.
 
